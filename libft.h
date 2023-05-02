@@ -6,5 +6,6 @@
 # include <string.h>
 
 int ft_isalpha(int c);
+int ft_toupper(int c);
 
 #endif
