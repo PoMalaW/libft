@@ -1,14 +1,11 @@
-#include <stdio.h>
+//#include <stdio.h>
 
 int ft_isalpha(int c)
 {
-    if (!(c >= 'A' && c <= 'Z') || !(c >= 'a' && c <= 'z'))
-       return(0);
-    return(1);
+    return((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
 
-
-int main(void)
+/*int main(void)
 {
     char c = 0;
     while(c < 127)
@@ -24,4 +21,4 @@ int main(void)
         c++;
     }
     return 0;
-}
+}*/
