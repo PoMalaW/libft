@@ -2,7 +2,7 @@ NAME = libft.a #prog name
 CC=gcc #compilator
 CFLAGS=-Wall -Werror -Wextra #Compilation options
 SRC= ft_isalpha.c ft_isdigit.c ft_tolower.c ft_toupper.c ft_isalnum.c \
-ft_strchr.c
+ft_strchr.c ft_isascii.c
 OBJ= $(SRC: .c = .o) #convert .c in .o
 RM= rm -f
 
