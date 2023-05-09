@@ -1,4 +1,4 @@
-int ft_print(int c)
+int ft_isprint(int c)
 {
     return(c >= ' ' && c <= '~');
 }
