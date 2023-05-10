@@ -3,7 +3,7 @@ CC=gcc #compilator
 CFLAGS=-Wall -Werror -Wextra #Flags de compilation
 SRC= ft_isalpha.c ft_isdigit.c ft_tolower.c ft_toupper.c ft_isalnum.c \
 ft_strchr.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c \
-ft_bzero.c ft_memcpy.c ft_memmove.c
+ft_bzero.c ft_memcpy.c ft_memmove.c ft_memset.c
 OBJ= $(SRC: .c = .o) #convert .c in .o
 RM= rm -f
 
