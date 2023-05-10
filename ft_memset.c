@@ -6,12 +6,8 @@ void ft_memset(void *s, int c, size_t n)
 
     while(i <= n)
     {
-        while (*s != c)
-        {
-            if(i == n)
-                return(NULL);
-            i++;
-        }
+        s[i] = c;
+        i++;
     }
     return(&s[i]);
 }
