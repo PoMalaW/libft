@@ -4,9 +4,11 @@ int ft_atoi(const char *nptr)
 {
     int i;
     int sign;
+    int num;
 
     i = 0;
     sign = 1;
+    num = 0;
 
     while (nptr[i] == ' ' || nptr[i] >= '\a' && nptr[i] <= '\r') 
         i++;
