@@ -1,5 +1,5 @@
 #include "libft.h"
-#include <stdio.h>
+//#include <stdio.h>
 
 int ft_isalnum(int c)
 {
@@ -8,7 +8,7 @@ int ft_isalnum(int c)
     return(0);
 }
 
-int main(void)
+/*int main(void)
 {
     char c = 0;
     while(c < 127)
@@ -24,4 +24,4 @@ int main(void)
         c++;
     }
     return 0;
-}
+}*/
