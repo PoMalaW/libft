@@ -5,6 +5,7 @@
 # include <stdlib.h>
 # include <string.h>
 
+int ft_atoi(const char *nptr);
 int ft_isalpha(int c);
 int ft_toupper(int c);
 int ft_tolower(int c);
