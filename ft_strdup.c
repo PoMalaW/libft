@@ -14,11 +14,3 @@ char    *ft_strdup(const char *s)
     ft_memcpy(dest, src, n);
     return(dest);
 }
-
-int main(void)
-{
-    const char *s;
-
-    s = "W2sZ7kdv2y";
-    printf("%s", strdup(s));
-}
