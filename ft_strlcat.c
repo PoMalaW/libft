@@ -10,12 +10,12 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
 
     while(dst[i] < '\0')
         i++;
-    while (i <= (i + size))
+    while (j <= (i + size))
     {
-        dst[i] = src[j];
+        dst[i + j] = src[j];
         i++;
         j++;
     }
-    dst[i] = '\0';
-    return(i);
+    dst[i + j] = '\0';
+    return(i + j);
 }
