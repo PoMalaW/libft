@@ -10,9 +10,9 @@ int ft_atoi(const char *nptr)
     sign = 1;
     num = 0;
 
-    while (nptr[i] == ' ' || (nptr[i] >= '\a' && nptr[i] <= '\r')) 
+    while(nptr[i] == ' ' || (nptr[i] >= '\a' && nptr[i] <= '\r')) 
         i++;
-    if(nptr[i] == '+' || nptr[i] == '-')
+    while(nptr[i] == '+' || nptr[i] == '-')
     {
         if(nptr[i] == '-')
             sign *= -1;

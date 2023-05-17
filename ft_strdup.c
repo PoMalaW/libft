@@ -9,6 +9,8 @@ char    *ft_strdup(const char *s)
     n = ft_strlen(s);
     n++;
     dest = (char *) malloc(n * sizeof(char));
+    if(dest == NULL)
+        return(NULL);
     src = (const void *)s;
     ft_memcpy(dest, src, n);
     return(dest);
