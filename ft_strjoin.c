@@ -20,12 +20,12 @@ char    *ft_strjoin(char const *s1, char const *s2)
     new = (char *)malloc((len + 1) * sizeof * new);
     if(new == NULL)
         return(0);
-    while(i <= s1len)
+    while(i < s1len)
     {
         new[i] = s1[i];
         i++;
     }
-    while(i + j <= len)
+    while(i + j < len)
     {
         new[i + j] = s2[j];
         j++;
