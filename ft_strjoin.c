@@ -9,16 +9,18 @@ char    *ft_strjoin(char const *s1, char const *s2)
     size_t i;
     size_t j;
 
-    s1len = ft_strlen(s1);
-    s2len = ft_strlen(s2);
-    len = s1len + s2len;
     i = 0;
     j = 0;
 
-    new = (char *)malloc(len* sizeof(char));
+    if(!s1 || !s2)
+        return(NULL);
+    s1len = ft_strlen(s1);
+    s2len = ft_strlen(s2);
+    len = s1len + s2len;
+    new = (char *)malloc((len + 1) * sizeof * new);
     if(new == NULL)
         return(0);
-    while(i < s1len)
+    while(i <= s1len)
     {
         new[i] = s1[i];
         i++;
@@ -28,5 +30,6 @@ char    *ft_strjoin(char const *s1, char const *s2)
         new[i + j] = s2[j];
         j++;
     }
+    new[i + j] = '\0';
     return(new);
 }
