@@ -12,13 +12,13 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
     csrc = (char *)src;
     cdest = (char *)dest;
 
-    while(i <= n)
+    while(i < n)
     {
         temp[i] = csrc[i];
         i++;
     }
     i = 0;
-    while(i <= n)
+    while(i < n)
     {
         cdest[i] = temp[i];
         i++;

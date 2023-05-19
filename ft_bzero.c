@@ -7,7 +7,7 @@ void ft_bzero(void *s, size_t n)
 
     i = 0;
     schar = (char *) s;
-    while(i <= n)
+    while(i < n)
     {
         schar[i] = '\0';
         i++;

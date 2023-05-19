@@ -8,7 +8,7 @@ void    *ft_memchr(const void *s, int c, size_t n)
     i = 0;
     bytes = (unsigned char *)s;
 
-    while(i <= n)
+    while(i < n)
     {
         if (bytes[i] == c)
             return(&bytes[i]);

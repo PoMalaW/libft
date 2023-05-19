@@ -10,7 +10,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     a = (int *)s1;
     b = (int *)s2;
 
-    while(i <= n)
+    while(i < n)
     {
         if(a[i] == b[i])
             i++;
