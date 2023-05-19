@@ -18,11 +18,11 @@ char    *ft_strnstr(const char *s1, const char *s2, size_t n)
     {
         if(s1[i] == s2[j])
         {
-            while(s1[i] == s2[i + j] && i < n)
-                i++;
+            while(s1[i + j] == s2[j] && j < n)
+                j++;
             return(&small[i]);
         }
-        j++;
+        i++;
     }
     return(NULL);
 }
