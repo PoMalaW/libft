@@ -38,7 +38,7 @@ size_t  ft_count(char const *s, char c)
 }
 
 
-char **ft_split(char const *s, char c)
+char    **ft_split(char const *s, char c)
 {
     char **array;
     size_t len;
