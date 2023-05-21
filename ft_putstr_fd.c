@@ -1,13 +1,14 @@
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void    ft_putstr_fd(char *s, int fd)
 {
     size_t i;
 
     i = 0;
+
     while(s[i] != '\0')
     {
-        (*f)(i, s + i);
+        ft_putchar_fd(s[i], fd);
         i++;
     }
 }
