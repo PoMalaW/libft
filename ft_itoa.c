@@ -26,6 +26,12 @@ char    *ft_itoa(int n)
     if(str == NULL)
         return(NULL);
     i = 0;
+    if(n == 0)
+    {
+        str[i] = 0;
+        str[i + 1] = '\0';
+        return(str);   
+    }
     if(n < 0)
     {
         str[i] = '-';
