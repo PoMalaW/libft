@@ -10,7 +10,7 @@ void    *ft_memchr(const void *s, int c, size_t n)
 
     while(i < n)
     {
-        if (bytes[i] == c)
+        if (bytes[i] == (unsigned char)c)
             return(&bytes[i]);
         i++;
     }

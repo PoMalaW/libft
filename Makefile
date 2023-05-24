@@ -1,31 +1,37 @@
-NAME = libft.a #prog name
-CC=gcc #compilator
-CFLAGS=-Wall -Werror -Wextra #Flags de compilation
-LDLIBS=-lft
-LDFLAGS=-L.
-SRC= ft_isalpha.c ft_isdigit.c ft_tolower.c ft_toupper.c ft_isalnum.c \
-ft_strchr.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c \
-ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_memcmp.c ft_atoi.c \
-ft_strlcpy.c ft_strlcat.c ft_calloc.c ft_strdup.c ft_strrchr.c ft_strncmp.c \
-ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
-ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+NAME = libft.a
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
+LDLIBS = -lft
+LDFLAGS = -L.
+SRC = ft_isalpha.c ft_isdigit.c ft_tolower.c ft_toupper.c ft_isalnum.c \
+	ft_strchr.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c \
+	ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_memcmp.c ft_atoi.c \
+	ft_strlcpy.c ft_strlcat.c ft_calloc.c ft_strdup.c ft_strrchr.c ft_strncmp.c \
+	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
+	ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
+	ft_putnbr_fd.c ft_strnstr.c
 
-OBJ= $(SRC: .c = .o) #convert .c in .o
-RM= rm -f
+OBJ = $(SRC:.c=.o)
+RM = rm -f
+INC = ./inc/
 
-#S'assure que les fonctions soient bien appellées
-all: $(NAME)
+# Make sure the functions are properly called
+all: $(NAME) clean
 
-#cree la librairie et compile
-$(NAME) : $(OBJ)
-		ar rcs $(NAME) $(OBJ)
+# Create the library and compile
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
+	ranlib $(NAME)
 
-clean :
-		$(RM) $(OBJ)
+%.o: %.c
+	$(CC) -I. -o $@ -c $< $(CFLAGS)
 
-fclean : clean
-		$(RM) $(NAME)
+clean:
+	$(RM) $(OBJ)
 
-re : fclean all
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
 
 .PHONY: all clean fclean re
