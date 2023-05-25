@@ -12,12 +12,10 @@ int ft_atoi(const char *nptr)
 
     while(nptr[i] == ' ' || (nptr[i] >= '\a' && nptr[i] <= '\r')) 
         i++;
-    while(nptr[i] == '+' || nptr[i] == '-')
-    {
-        if(nptr[i] == '-')
-            sign *= -1;
+    if(nptr[i] == '-')
+        sign *= -1;
+    if(nptr[i] == '-' || nptr[i] == '+')
         i++;
-    }
     while(nptr[i] >= 48 && nptr[i] <= 57)
     {
         num = num * 10 + (nptr[i] - 48);
