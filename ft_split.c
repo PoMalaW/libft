@@ -51,6 +51,6 @@ char    **ft_split(char const *s, char c)
             ++i;
         array[j++] = ft_substr(s,start, i - start);
     }
-    array[j] = NULL;
+    array[j] = '\0';
     return array;
 }
