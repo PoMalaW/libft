@@ -12,6 +12,10 @@ SRC = ft_isalpha.c ft_isdigit.c ft_tolower.c ft_toupper.c ft_isalnum.c \
 	ft_putnbr_fd.c ft_strnstr.c
 
 OBJ = $(SRC:.c=.o)
+
+BONUS = ft_lstnew.c
+
+BONUS_OBJ = $(BONUS:.c=.o)
 RM = rm -f
 INC = ./inc/
 
@@ -34,4 +38,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus: $(OBJ) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+
+.PHONY: all clean fclean re bonus
